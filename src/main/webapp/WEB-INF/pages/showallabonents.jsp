@@ -1,7 +1,7 @@
 <%@include file="include.jsp" %>
 <html>
 <head>
-    <title>All books</title>
+    <title>All abonents</title>
 </head>
 <body>
 
