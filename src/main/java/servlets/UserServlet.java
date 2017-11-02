@@ -39,6 +39,7 @@ public class UserServlet extends HttpServlet {
         serviceAbonentService = new ServiceAbonentServiceImpl(new SQLServiceAbonentDaoImpl(emFactory));
         callService = new CallServiceImpl(new SQLCallDaoImpl(emFactory));
         paymentService = new PaymentServiceImpl(new SQLPaymentDaoImpl(emFactory));
+        initDB();
     }
 
     @Override

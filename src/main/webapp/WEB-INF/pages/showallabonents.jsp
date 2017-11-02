@@ -12,22 +12,22 @@
             <thead>
             <tr>
                 <th>Name</th>
-               // <th>Type</th>
-               //<th>Services</th>
-               // <th>Balance</th>
-               // <th>AddService</th>
-               // <th>PayOnLine</th>
+                <th>Type</th>
+                <th>Services</th>
+                <th>Balance</th>
+                <th>AddService</th>
+                <th>PayOnLine</th>
             </tr>
             </thead>
             <tbody id="tBody">
             <c:forEach items="${abonents}" var="abonent">
                 <tr>
-                    <td>${abonent.name}</th>
-                    //<th>${abonent.type}</th>
-                    //<th>${abonent.services}</th>
-                    //<th>${abonent.balance}</th>
-                    //<th><button class="AddService">Add service</button></th>
-                    //<th><button class="PayOnline">Pay online</button></th>
+                    <td>${abonent.name}</td>
+                    <td>${abonent.type}</td>
+                    <td>${abonent.services}</td>
+                    <td>${abonent.balance}</td>
+                    <td><button class="AddService">Add service</button></td>
+                    <td><button class="PayOnline">Pay online</button></td>
                 </tr>
             </c:forEach>
             </tbody>

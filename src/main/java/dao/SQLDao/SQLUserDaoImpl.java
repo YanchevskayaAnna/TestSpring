@@ -51,7 +51,7 @@ public class SQLUserDaoImpl extends SQLAbstractDAOImpl<User> implements UserDao 
         List<AbonentInfo> resultlist = new ArrayList<>();
         for (Abonent abonent: abonentlist){
             AbonentInfo abonentInfo = new AbonentInfo();
-            abonentInfo.setAbonent(abonent);
+            abonentInfo.setName(abonent.getName());
             abonentInfo.setType(user.getUserType());
             abonentInfo.setServices(new SQLServiceAbonentDaoImpl(this.factory).getCurrentServices(abonent, LocalDate.now()));
             abonentInfo.setBalance(new SQLAbonentDaoImpl(this.factory).calculateBalance(abonent, LocalDate.now()));

@@ -8,35 +8,35 @@ import java.util.List;
 
 public class AbonentInfo {
 
-    private Abonent abonent;
+    private String name;
     private UserType type;
     private List<Service> services;
 
     public AbonentInfo() {
     }
 
-    public AbonentInfo(Abonent abonent, UserType type, List<Service> services, Integer balance) {
-        this.abonent = abonent;
+    public AbonentInfo(String name, UserType type, List<Service> services, Integer balance) {
+        this.name = name;
         this.type = type;
 
         this.services = services;
         this.balance = balance;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     private Integer balance;
-
-    public Abonent getAbonent() {
-        return abonent;
-    }
-
-    public void setAbonent(Abonent abonent) {
-        this.abonent = abonent;
-    }
 
     @Override
     public String toString() {
         return "AbonentInfo{" +
-                "abonent=" + abonent +
+                "abonent=" + name +
                 ", type=" + type +
                 ", services=" + services +
                 ", balance=" + balance +
@@ -74,14 +74,14 @@ public class AbonentInfo {
 
         AbonentInfo that = (AbonentInfo) o;
 
-        if (abonent != null ? !abonent.equals(that.abonent) : that.abonent != null) return false;
+        if (name != null ? !name.equals(that.name) : that.name != null) return false;
         return false;
 
     }
 
     @Override
     public int hashCode() {
-        int result = abonent != null ? abonent.hashCode() : 0;
+        int result = name != null ? name.hashCode() : 0;
         return result;
     }
 
